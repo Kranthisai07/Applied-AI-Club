@@ -21,7 +21,7 @@ const members = [
     { name: 'Ghaayathri Devi K', role: 'Vice-President', image: '/assets/team/ghaayathri.jpg' },
     { name: 'Charansai Maddineni', role: 'Secretary', image: '/assets/team/charansai.jpg' },
     { name: 'Tanvi Tomar', role: 'Treasurer', image: '/assets/team/tanvi.jpg' },
-    { name: 'Kranthi Sai Gadi', role: 'Officer', image: '/assets/team/kranthi.jpg' },
+    { name: 'Kranthi Gadi', role: 'Tech Lead', image: '/assets/team/kranthi.jpg' },
     { name: 'Sam Franco', role: 'Officer - Videographer', image: '/assets/team/sam.jpg' },
 ];
 
