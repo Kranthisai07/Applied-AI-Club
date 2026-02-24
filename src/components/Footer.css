@@ -1,0 +1,186 @@
+/* ========================================
+   Futuristic Footer — Applied AI Club
+   ======================================== */
+
+.footer {
+    background: #050508;
+    position: relative;
+    padding: 0;
+}
+
+/* Thin cyan top border */
+.footer__top-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.2), transparent);
+}
+
+/* ── 2-column layout ── */
+.footer__grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 64px 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+/* ── Column base ── */
+.footer__col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Column headings (terminal style) ── */
+.footer__col-heading {
+    font-family: var(--font-tech);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    color: var(--neon-cyan, #00F0FF);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* ========== LEFT COLUMN: BRAND ========== */
+.footer__col--brand {
+    gap: 10px;
+}
+
+.footer__col--brand .logobrand {
+    width: 48px;
+    height: 48px;
+}
+
+.footer__brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer__brand-name {
+    font-family: 'Orbitron', 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.14em;
+    color: #ffffff;
+}
+
+.footer__brand-uni {
+    font-family: 'Share Tech Mono', 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: #FFD100;
+}
+
+.footer__tagline {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.6;
+    margin-top: 16px;
+}
+
+/* ========== RIGHT COLUMN: SOCIALS ========== */
+.footer__col--social {
+    align-items: flex-start;
+    padding-top: 4px;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.footer__social-icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* Hover: GitHub → white glow */
+.footer__social-link--gh:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.2);
+}
+
+/* Hover: LinkedIn → neon blue */
+.footer__social-link--li:hover {
+    color: #0077B5;
+    border-color: rgba(0, 119, 181, 0.4);
+    background: rgba(0, 119, 181, 0.08);
+    box-shadow: 0 0 18px rgba(0, 119, 181, 0.3);
+}
+
+/* Hover: Discord → neon purple */
+.footer__social-link--dc:hover {
+    color: #5865F2;
+    border-color: rgba(88, 101, 242, 0.4);
+    background: rgba(88, 101, 242, 0.08);
+    box-shadow: 0 0 18px rgba(88, 101, 242, 0.3);
+}
+
+/* Hover: Instagram → neon magenta */
+.footer__social-link--ig:hover {
+    color: #E1306C;
+    border-color: rgba(225, 48, 108, 0.4);
+    background: rgba(225, 48, 108, 0.08);
+    box-shadow: 0 0 18px rgba(225, 48, 108, 0.3);
+}
+
+/* ========== BOTTOM DISCLAIMER BAR ========== */
+.footer__bottom {
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer__bottom-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.footer__disclaimer,
+.footer__copy {
+    font-family: var(--font-tech);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 640px) {
+    .footer__grid {
+        flex-direction: column;
+        padding: 48px 20px;
+        gap: 40px;
+    }
+
+    .footer__brand-name {
+        font-size: 1.2rem;
+    }
+
+    .footer__bottom-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px 20px;
+    }
+}

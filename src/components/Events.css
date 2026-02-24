@@ -1,0 +1,189 @@
+.events__timeline {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.events__item {
+    display: flex;
+    gap: 24px;
+}
+
+.events__marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 20px;
+}
+
+.events__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--pnw-gold);
+    box-shadow: 0 0 10px var(--pnw-gold-glow);
+    flex-shrink: 0;
+    margin-top: 20px;
+}
+
+.events__line {
+    width: 1px;
+    flex: 1;
+    background: linear-gradient(to bottom, var(--pnw-gold-dim), transparent);
+}
+
+.events__card {
+    flex: 1;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+}
+
+.events__date {
+    font-family: var(--font-tech);
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    color: var(--pnw-gold);
+    margin-bottom: 8px;
+}
+
+.events__title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+}
+
+.events__desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.events__status {
+    font-family: var(--font-tech);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+}
+
+.events__status--upcoming {
+    color: var(--neon-green);
+    background: rgba(57, 255, 20, 0.06);
+    border-color: rgba(57, 255, 20, 0.2);
+}
+
+@media (max-width: 640px) {
+    .events__marker {
+        display: none;
+    }
+
+    .events__item {
+        gap: 0;
+    }
+}
+
+/* Priority card — TED Talk */
+.events__card--priority {
+    border-color: rgba(255, 0, 153, 0.4);
+    box-shadow: 0 0 30px rgba(255, 0, 153, 0.1), 0 0 0 1px rgba(255, 0, 153, 0.15);
+    position: relative;
+}
+
+.events__dot--priority {
+    background: #ff0099;
+    box-shadow: 0 0 14px rgba(255, 0, 153, 0.8);
+}
+
+.events__priority-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-tech);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    color: #ff0099;
+    background: rgba(255, 0, 153, 0.08);
+    border: 1px solid rgba(255, 0, 153, 0.25);
+    border-radius: 4px;
+    padding: 4px 10px;
+    margin-bottom: 14px;
+}
+
+.events__card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.events__card-top .events__date {
+    margin-bottom: 0;
+}
+
+.events__type {
+    font-family: var(--font-tech);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: var(--neon-cyan);
+    text-transform: uppercase;
+}
+
+.events__meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.events__location {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+}
+
+.events__countdown {
+    font-family: var(--font-tech);
+    font-size: 0.62rem;
+    color: var(--neon-cyan);
+    letter-spacing: 0.08em;
+}
+
+.events__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-tech);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+}
+
+.events__status--upcoming {
+    color: var(--neon-green);
+    background: rgba(57, 255, 20, 0.06);
+    border-color: rgba(57, 255, 20, 0.2);
+}
+
+.events__pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--neon-green);
+    box-shadow: 0 0 8px var(--neon-green);
+    animation: pulse 1.6s ease-in-out infinite;
+    flex-shrink: 0;
+}

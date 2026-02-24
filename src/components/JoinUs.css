@@ -1,0 +1,35 @@
+.joinus {
+    background: var(--bg-secondary);
+    text-align: center;
+    position: relative;
+}
+
+.joinus::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--pnw-gold-dim), transparent);
+}
+
+.joinus__inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.joinus__ctas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.joinus__note {
+    font-family: var(--font-tech);
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+}
