@@ -12,6 +12,7 @@ import JoinUs from './components/JoinUs';
 import Footer from './components/Footer';
 import ProjectsPage from './pages/ProjectsPage';
 import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
 import PNWResourcesPage from './pages/PNWResourcesPage';
 
 function ScrollToTop() {
@@ -49,6 +50,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/resources/pnw" element={<PNWResourcesPage />} />
         </Routes>
       </main>

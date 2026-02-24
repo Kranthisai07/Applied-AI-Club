@@ -1,49 +1,69 @@
+import { Link } from 'react-router-dom';
+import { blogPosts } from '../data/blogPosts';
 import './BlogPage.css';
 
-const previewPosts = [
-    {
-        title: 'Building Your First Agent with LangChain',
-        category: 'TUTORIAL',
-        preview: 'Step-by-step guide to building autonomous AI agents with tool-calling capabilities.',
-        date: '2026.03.01',
-    },
-    {
-        title: 'How We Built PNW Vision Lab',
-        category: 'CASE STUDY',
-        preview: 'Behind the scenes of our campus object detection system using YOLOv8.',
-        date: '2026.02.20',
-    },
-    {
-        title: 'RAG vs Fine-Tuning: What We Learned',
-        category: 'RESEARCH',
-        preview: 'Practical insights from building both approaches for our PNW Knowledge Assistant.',
-        date: '2026.02.10',
-    },
-];
-
 export default function BlogPage() {
+    const [featured, ...rest] = blogPosts;
+
     return (
         <div className="blog-page section-padding">
             <div className="container">
-                <div style={{ marginBottom: '3rem' }}>
+                {/* Header */}
+                <div className="blog-page__header">
                     <div className="aic-label">// TRANSMISSION LOG</div>
-                    <h2 className="aic-heading">Blog <span className="gold">// Coming Soon</span></h2>
-                    <p className="aic-subtext">Written by Applied AI Club members. Tutorials, research notes, and project deep-dives.</p>
+                    <h2 className="aic-heading">Blog</h2>
+                    <p className="aic-subtext">
+                        Written by Applied AI Club members. Tutorials, research notes, and project deep-dives.
+                    </p>
                 </div>
 
-                <div className="blog-page__grid">
-                    {previewPosts.map((post, i) => (
-                        <div key={i} className="glass-card blog-page__card">
-                            <span className="blog-page__category">{post.category}</span>
-                            <h3 className="blog-page__title">{post.title}</h3>
-                            <p className="blog-page__preview">{post.preview}</p>
+                {/* Featured post */}
+                {featured && (
+                    <Link to={`/blog/${featured.slug}`} className="blog-page__featured glass-card">
+                        <div className="blog-page__featured-inner">
+                            <span className="blog-page__category">{featured.category}</span>
+                            <h3 className="blog-page__featured-title">{featured.title}</h3>
+                            <p className="blog-page__featured-desc">{featured.description}</p>
                             <div className="blog-page__meta">
-                                <span className="blog-page__date">{post.date}</span>
-                                <span className="blog-page__status">DRAFT</span>
+                                <span className="blog-page__date">
+                                    {new Date(featured.date).toLocaleDateString('en-US', {
+                                        year: 'numeric', month: 'short', day: 'numeric',
+                                    })}
+                                </span>
+                                <span className="blog-page__reading-time">{featured.readingTime}</span>
+                            </div>
+                            <div className="blog-page__tags">
+                                {featured.tags.slice(0, 4).map((tag) => (
+                                    <span key={tag} className="blog-page__tag">{tag}</span>
+                                ))}
                             </div>
                         </div>
-                    ))}
-                </div>
+                        <div className="blog-page__featured-cta">
+                            <span className="blog-page__read-btn">Read Article &rarr;</span>
+                        </div>
+                    </Link>
+                )}
+
+                {/* Remaining posts grid */}
+                {rest.length > 0 && (
+                    <div className="blog-page__grid">
+                        {rest.map((post) => (
+                            <Link to={`/blog/${post.slug}`} key={post.slug} className="glass-card blog-page__card">
+                                <span className="blog-page__category">{post.category}</span>
+                                <h3 className="blog-page__title">{post.title}</h3>
+                                <p className="blog-page__preview">{post.description}</p>
+                                <div className="blog-page__meta">
+                                    <span className="blog-page__date">
+                                        {new Date(post.date).toLocaleDateString('en-US', {
+                                            year: 'numeric', month: 'short', day: 'numeric',
+                                        })}
+                                    </span>
+                                    <span className="blog-page__reading-time">{post.readingTime}</span>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
     );
