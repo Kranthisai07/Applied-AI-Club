@@ -1,4 +1,5 @@
 import './LogoBrand.css';
+import brainLogo from '/assets/brand/Gemini_Generated_Image_dcrptcdcrptcdcrp-removebg-preview.png';
 
 /**
  * LogoBrand — Pure brain-circuit icon, no background/border/text.
@@ -16,7 +17,7 @@ export default function LogoBrand({ size = 'small' }) {
 
     return (
         <img
-            src="/assets/brand/Gemini_Generated_Image_dcrptcdcrptcdcrp-removebg-preview.png"
+            src={brainLogo}
             alt="Applied AI Club"
             className={`logobrand logobrand--${size}`}
             width={px}
