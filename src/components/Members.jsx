@@ -23,6 +23,7 @@ const members = [
     { name: 'Tanvi Tomar', role: 'Treasurer', image: '/assets/team/tanvi.jpg' },
     { name: 'Kranthi Gadi', role: 'Tech Lead', image: '/assets/team/kranthi.jpg' },
     { name: 'Sam Franco', role: 'Officer - Videographer', image: '/assets/team/sam.jpg' },
+    { name: 'Panagiotis Papadopoulos', role: 'Event Planner', image: '/assets/team/panagiotis.jpg' },
 ];
 
 export default function Members() {
