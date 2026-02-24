@@ -86,7 +86,7 @@ export default function Footer() {
             <div className="footer__bottom">
                 <div className="container footer__bottom-inner">
                     <span className="footer__disclaimer">
-                        Applied AI Club is a student-run organization at Purdue University Northwest.
+                        Applied AI Club at Purdue University Northwest.
                     </span>
                     <span className="footer__copy">
                         &copy; {new Date().getFullYear()} Applied AI Club. All rights reserved.
