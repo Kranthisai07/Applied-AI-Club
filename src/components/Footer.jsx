@@ -41,7 +41,7 @@ const NAV_LINKS = [
 
 const SOCIALS = [
     { Icon: IconInstagram, label: 'Instagram', href: '#', hoverClass: 'footer__social-link--ig' },
-    { Icon: IconLinkedin, label: 'LinkedIn', href: '#', hoverClass: 'footer__social-link--li' },
+    { Icon: IconLinkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/company/applied-ai-club-at-purdue-university-northwest', hoverClass: 'footer__social-link--li' },
     { Icon: IconDiscord, label: 'Discord', href: 'https://discord.gg/48BWveQJ', hoverClass: 'footer__social-link--dc' },
     { Icon: IconGithub, label: 'GitHub', href: '#', hoverClass: 'footer__social-link--gh' },
 ];
