@@ -9,10 +9,47 @@
     padding: 36px 28px;
 }
 
+.initiatives__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
 .initiatives__icon {
     width: 48px;
     height: 48px;
-    margin-bottom: 20px;
+}
+
+.status-badge {
+    font-family: var(--font-tech);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    text-transform: uppercase;
+}
+
+.status--in-discovery {
+    color: var(--neon-cyan);
+    border-color: rgba(0, 229, 255, 0.3);
+}
+
+.status--in-design {
+    color: var(--pnw-gold);
+    border-color: rgba(230, 211, 149, 0.3);
+}
+
+.status--prototype {
+    color: #00ff88;
+    border-color: rgba(0, 255, 136, 0.3);
+}
+
+.status--long-term-vision {
+    color: #bd00ff;
+    border-color: rgba(189, 0, 255, 0.3);
 }
 
 .initiatives__icon svg {

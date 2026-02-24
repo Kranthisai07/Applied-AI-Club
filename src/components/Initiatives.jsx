@@ -18,40 +18,46 @@ function RevealDiv({ children, className = '', style }) {
 
 const initiatives = [
     {
-        title: 'Computer Vision for Manufacturing',
-        desc: 'Automated quality inspection using deep learning models trained on production-line imagery.',
-        tags: ['Vision', 'Deep Learning', 'Industry'],
-        icon: <><rect x="6" y="10" width="36" height="28" rx="3" /><circle cx="24" cy="24" r="8" /><line x1="24" y1="16" x2="24" y2="32" strokeDasharray="2 2" /><line x1="16" y1="24" x2="32" y2="24" strokeDasharray="2 2" /></>
+        title: 'SaaS App that Connects Students and Professors',
+        status: 'In Discovery',
+        desc: 'A campus-wide SaaS platform that makes it easy for students to discover professors, book office hours, and join research projects.',
+        tags: ['SaaS platform', 'Matching', 'Scheduling'],
+        icon: <><rect x="8" y="8" width="32" height="32" rx="4" /><line x1="14" y1="18" x2="34" y2="18" /><line x1="14" y1="26" x2="26" y2="26" /><line x1="14" y1="34" x2="30" y2="34" /></>
     },
     {
-        title: 'Predictive Analytics for Energy',
-        desc: 'Time-series forecasting models that optimize energy grid management and distribution efficiency.',
-        tags: ['Forecasting', 'Energy', 'Data Science'],
-        icon: <><polyline points="6,36 14,28 22,32 30,18 38,22 46,12" /><line x1="6" y1="42" x2="46" y2="42" /><line x1="6" y1="42" x2="6" y2="10" /></>
+        title: 'Smart Parking Prediction System',
+        status: 'In Discovery',
+        desc: 'Predict campus parking availability in real time, so students and staff know the best lot and time to arrive before they even start driving.',
+        tags: ['Vision', 'Forecasting', 'Smart Campus'],
+        icon: <><rect x="8" y="14" width="32" height="20" rx="4" /><circle cx="16" cy="34" r="4" /><circle cx="32" cy="34" r="4" /><path d="M12 14l4-8h16l4 8" /></>
     },
     {
-        title: 'NLP for Education & Support',
-        desc: 'Intelligent document analysis and chatbot systems that streamline student support and advising.',
-        tags: ['NLP', 'LLMs', 'Education'],
-        icon: <><rect x="10" y="6" width="28" height="36" rx="4" /><line x1="16" y1="14" x2="32" y2="14" /><line x1="16" y1="20" x2="28" y2="20" /><line x1="16" y1="26" x2="30" y2="26" /></>
+        title: 'Smart AI Cafeteria Super App',
+        status: 'In Design',
+        desc: 'Unified cafeteria app that predicts crowd levels, suggests meals based on health goals, and enables pre-ordering to reduce waste.',
+        tags: ['RecSys', 'Forecasting', 'Mobile'],
+        icon: <><path d="M6 34h36l-3-20H9l-3 20z" /><line x1="12" y1="14" x2="12" y2="10" /><line x1="24" y1="14" x2="24" y2="10" /><line x1="36" y1="14" x2="36" y2="10" /></>
     },
     {
-        title: 'AI Agents & Automation',
-        desc: 'Multi-agent reinforcement learning for autonomous decision-making in logistics and scheduling.',
-        tags: ['Agents', 'RL', 'Automation'],
-        icon: <><circle cx="24" cy="18" r="10" /><path d="M14 40c0-5.5 4.5-10 10-10s10 4.5 10 10" /><line x1="34" y1="14" x2="42" y2="8" /><circle cx="42" cy="8" r="3" /></>
+        title: 'Smart Students Interest Matcher',
+        status: 'In Discovery',
+        desc: 'An AI matcher that connects students with clubs, hackathons, and research groups based on interests, courses, and GitHub/LinkedIn activity.',
+        tags: ['Graph Matching', 'NLP', 'Embeddings'],
+        icon: <><circle cx="14" cy="14" r="6" /><circle cx="34" cy="14" r="6" /><circle cx="24" cy="34" r="6" /><line x1="18" y1="18" x2="22" y2="30" /><line x1="30" y1="18" x2="26" y2="30" /><line x1="20" y1="14" x2="28" y2="14" /></>
     },
     {
-        title: 'Healthcare AI & Diagnostics',
-        desc: 'Medical imaging analysis and clinical NLP to accelerate diagnostics and personalize treatment.',
-        tags: ['Healthcare', 'Vision', 'NLP'],
-        icon: <><path d="M24 6v36M6 24h36" /><circle cx="24" cy="24" r="16" /><circle cx="24" cy="24" r="6" /></>
+        title: 'Smart Campus Navigation',
+        status: 'Prototype',
+        desc: 'A smart navigation layer that knows classrooms, quiet study spots, and transit schedules, predicting occupancy and arrival times.',
+        tags: ['Location Intel', 'RL', 'Navigation'],
+        icon: <><path d="M24 6c-8 0-14 6-14 14 0 10 14 22 14 22s14-12 14-22c0-8-6-14-14-14z" /><circle cx="24" cy="20" r="5" /></>
     },
     {
-        title: 'Cybersecurity & Threat Intel',
-        desc: 'Deep learning for network intrusion detection, anomaly classification, and automated response.',
-        tags: ['Security', 'Deep Learning', 'Networks'],
-        icon: <><rect x="6" y="14" width="16" height="20" rx="3" /><rect x="26" y="14" width="16" height="20" rx="3" /><line x1="22" y1="22" x2="26" y2="22" /><line x1="22" y1="28" x2="26" y2="28" /></>
+        title: 'Campus Real-Time AI Platform',
+        status: 'Long-term Vision',
+        desc: 'A shared platform that streams real-time campus sensor data into a single agentic layer for experiments and student projects.',
+        tags: ['Streaming', 'Agents', 'Infrastructure'],
+        icon: <><path d="M12 36c-4 0-7-3-7-7 0-3.5 3-6.5 6.5-7 1-5 5-9 10.5-9 6 0 11 5 11 11 4 0 7 3 7 7s-3 7-7 7H12z" /><circle cx="24" cy="26" r="3" /></>
     }
 ];
 
@@ -62,14 +68,19 @@ export default function Initiatives() {
                 <RevealDiv>
                     <div className="aic-label">// ACTIVE PROJECTS</div>
                     <h2 className="aic-heading">Use Cases & <span className="gold">Research</span></h2>
-                    <p className="aic-subtext">From manufacturing floors to hospital systems — Applied AI Club powers research that matters.</p>
+                    <p className="aic-subtext">Real campus projects we’re exploring this year — from parking and cafeterias to navigation and student matching.</p>
                 </RevealDiv>
 
                 <div className="initiatives__grid">
                     {initiatives.map((item, i) => (
                         <RevealDiv key={i} className="glass-card initiatives__tile">
-                            <div className="initiatives__icon">
-                                <svg viewBox="0 0 48 48">{item.icon}</svg>
+                            <div className="initiatives__header">
+                                <div className="initiatives__icon">
+                                    <svg viewBox="0 0 48 48">{item.icon}</svg>
+                                </div>
+                                <span className={`status-badge status--${item.status.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}>
+                                    {item.status}
+                                </span>
                             </div>
                             <h3>{item.title}</h3>
                             <p>{item.desc}</p>
