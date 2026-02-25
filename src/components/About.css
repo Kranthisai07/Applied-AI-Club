@@ -1,20 +1,35 @@
 .about__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 48px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-top: 56px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aic-lead-in {
+    margin-top: 24px;
+    font-family: var(--font-tech);
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: var(--pnw-gold);
 }
 
 .about__card {
     text-align: center;
-    padding: 48px 32px;
+    padding: 40px 32px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .about__card-icon {
     width: 64px;
     height: 64px;
-    margin: 0 auto 24px;
+    margin-bottom: 24px;
 }
 
 .about__card-icon svg {
@@ -24,19 +39,49 @@
     fill: none;
     stroke-width: 1.5;
     filter: drop-shadow(0 0 8px var(--pnw-gold-glow));
+    transition: filter 0.3s ease;
+}
+
+.about__card:hover .about__card-icon svg {
+    filter: drop-shadow(0 0 15px var(--pnw-gold-glow));
+    animation: iconPulse 2s infinite;
+}
+
+@keyframes iconPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 .about__card h3 {
     font-family: var(--font-heading);
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 16px;
     letter-spacing: 0.04em;
+    color: var(--text-primary);
 }
 
-.about__card p {
+.about__card-desc {
     font-size: 0.9rem;
     line-height: 1.7;
     color: var(--text-muted);
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.about__card-bottom {
+    font-family: var(--font-tech);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: var(--neon-cyan);
+    opacity: 0.8;
+    text-transform: uppercase;
 }
 
 .about__circuit-line {
@@ -54,9 +99,21 @@
     width: 80%;
 }
 
+@media (max-width: 1200px) {
+    .about__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        max-width: 800px;
+    }
+}
+
 @media (max-width: 768px) {
     .about__grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .about__card {
+        padding: 32px 24px;
     }
 }
